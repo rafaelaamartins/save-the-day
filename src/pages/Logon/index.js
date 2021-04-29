@@ -6,7 +6,6 @@ import api from '../../services/api';
 
 import './styles.css';
 
-import heroesImg from '../../assets/heroes.png';
 import Logo from '../../component/Logo';
 
 export default function Logon() {
@@ -49,8 +48,6 @@ export default function Logon() {
           </Link>
         </form>
       </section>
-
-      <img src={heroesImg} alt="Heroes" />
     </div>
   );
 }

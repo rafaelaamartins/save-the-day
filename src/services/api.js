@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.BASEURL || 'http://localhost:3333',
+  baseURL: `https://save-the-day-backend.herokuapp.com/`
 })
 
 export default api;

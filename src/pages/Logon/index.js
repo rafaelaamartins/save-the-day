@@ -34,7 +34,7 @@ export default function Logon() {
           <h1>Log in</h1>
 
           <input 
-            placeholder="Your ID"
+            placeholder="Your Email"
             value={id}
             onChange={e => setId(e.target.value)}
             required

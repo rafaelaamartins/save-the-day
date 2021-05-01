@@ -16,7 +16,6 @@ export default function Logon() {
     e.preventDefault();
     try {
       const response = await api.post('sessions', { id });
-      console.log(response.data)
       localStorage.setItem('ngoId', response.data._id);
       localStorage.setItem('ngoName', response.data.name);
       history.replace('/profile');

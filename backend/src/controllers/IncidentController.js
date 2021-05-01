@@ -2,11 +2,9 @@ const Incident = require('../models/Incident');
 
 module.exports = {
   async index(request, response) {
-
     try {
       const incidents = await Incident.where().populate('ngo')
       return response.json(incidents);
-      
     } catch (error) {
       return response.status(500).json({ error: 'Operation not permitted.' });
     }

@@ -64,8 +64,8 @@ export default function ShowIncident() {
                     <p>Contact:</p>
                     
                     <div className="contact-row">
-                      <a className="button" href={`tel:${incident.whatsapp}`}>Whatsapp</a>
-                      <a className="button" href={`mailto:${incident.email}`}>Email</a>
+                      <a className="button" href={`tel:${incident?.ngo?.whatsapp}`}>Whatsapp</a>
+                      <a className="button" href={`mailto:${incident?.ngo?.email}`}>Email</a>
                     </div>
                   </li>
               </ul>

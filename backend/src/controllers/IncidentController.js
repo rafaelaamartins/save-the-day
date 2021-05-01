@@ -30,7 +30,7 @@ module.exports = {
     
     const { description, title, value } = request.body;
 
-  
+    console.log(ngo_id);
     const incident = await Incident.create({
       title, 
       description,

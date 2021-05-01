@@ -6,7 +6,6 @@ import api from '../../services/api';
 
 import './styles.css';
 
-import heroesImg from '../../assets/heroes.png';
 import Logo from '../../component/Logo';
 
 export default function Logon() {
@@ -17,7 +16,8 @@ export default function Logon() {
     e.preventDefault();
     try {
       const response = await api.post('sessions', { id });
-      localStorage.setItem('ngoId', id);
+      console.log(response.data)
+      localStorage.setItem('ngoId', response.data._id);
       localStorage.setItem('ngoName', response.data.name);
       history.replace('/profile');
     } catch (err) {
@@ -35,7 +35,7 @@ export default function Logon() {
           <h1>Log in</h1>
 
           <input 
-            placeholder="Your ID"
+            placeholder="Your Email"
             value={id}
             onChange={e => setId(e.target.value)}
             required
@@ -49,8 +49,6 @@ export default function Logon() {
           </Link>
         </form>
       </section>
-
-      <img src={heroesImg} alt="Heroes" />
     </div>
   );
 }

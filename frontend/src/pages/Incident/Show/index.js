@@ -44,10 +44,10 @@ export default function ShowIncident() {
               <ul style={{ gridTemplateColumns : 'repeat(2, 1fr)' }}>
                   <li key={incident._id}>
                     <strong>Non-Governmental Organization:</strong>
-                    <p>{incident.ngo.name}</p>
+                    <p>{incident.ngo?.name}</p>
                     
                     <strong>City:</strong>
-                    <p>{incident.ngo.city}</p>
+                    <p>{incident.ngo?.city}</p>
 
                     <strong>Case:</strong>
                     <p>{incident.title}</p>

@@ -19,6 +19,17 @@ export default function EditIncident() {
 
   const ngoId = localStorage.getItem('ngoId');
 
+  React.useEffect(() => {
+    function getIncident() {
+      api.get(`/incidents/${id}`).then(response => {
+        setTitle(response.data.title)
+        setDescription(response.data.description)
+        setValue(response.data.value)
+      })
+    }
+    getIncident();
+  }, [id]);
+
   async function handleNewIncident(e) {
     e.preventDefault();
 

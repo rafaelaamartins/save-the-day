@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://save-the-day-backend.herokuapp.com/',
+  baseURL: 'https://3333-harlequin-viper-nl7y1t44.ws-us04.gitpod.io/',
   timeout: 15000,
   headers: {
       "Content-Type": "application/json"

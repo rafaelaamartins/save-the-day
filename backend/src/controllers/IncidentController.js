@@ -30,7 +30,6 @@ module.exports = {
     
     const { description, title, value } = request.body;
 
-    console.log(ngo_id);
     const incident = await Incident.create({
       title, 
       description,
@@ -45,11 +44,11 @@ module.exports = {
     const { id } = request.params;
     const incident = await Incident.findById(id);
     if (!incident._id) {
-      return response.status(401).json({ error: 'Operation not permitted.' });
+        return response.status(401).json({ error: 'Operation not permitted.' });
     }
-
-    const incidentUpdated = await Incident.findByIdAndUpdate(id, response.body);
-
+    
+    const incidentUpdated = await Incident.findByIdAndUpdate(id, request.body);
+    console.log(incidentUpdated)
     return response.json(incidentUpdated);
   },
 

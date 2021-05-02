@@ -28,13 +28,15 @@ export default function Profile() {
 
   async function handleDeleteIncident(id) {
     try {
-      await api.delete(`incidents/${id}`, {
-        headers: {
-          Authorization: ngoId,
+        if(window.confirm("Are you sure?")) {
+            await api.delete(`incidents/${id}`, {
+              headers: {
+                Authorization: ngoId,
+              }
+            }).then(() => {
+              setIncidents(incidents.filter(incident => incident._id !== id));
+            });
         }
-      }).then(() => {
-        setIncidents(incidents.filter(incident => incident._id !== id));
-      });
 
     } catch (err) {
       alert('Error deleting case, try again.');

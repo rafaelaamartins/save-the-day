@@ -22,6 +22,9 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get('/', (request, response) => {
+    return response.send("Backend working!");
+});
 
 app.post('/sessions', SessionController.create);
 

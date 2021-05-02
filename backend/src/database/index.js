@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// library to connect mongodb, and using environment variables
 mongoose.connect(`mongodb+srv://${process.env.MONGODB_CREDENTIALS}/${process.env.MONGODB_DB}?retryWrites=true&w=majority`, 
 { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 .then(() => {

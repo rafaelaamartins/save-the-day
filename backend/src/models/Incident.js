@@ -1,5 +1,6 @@
 const mongoose = require('../database');
 
+// creating the incident entity in mongodb
 const IncidentSchema = new mongoose.Schema({
   title: {
     type: String,

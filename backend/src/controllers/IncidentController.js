@@ -48,7 +48,6 @@ module.exports = {
     }
     
     const incidentUpdated = await Incident.findByIdAndUpdate(id, request.body);
-    console.log(incidentUpdated)
     return response.json(incidentUpdated);
   },
 

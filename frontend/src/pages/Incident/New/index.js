@@ -71,6 +71,8 @@ export default function NewIncident() {
             placeholder="Value"
             type="number"
             value={value}
+            min={0}
+            minLength={0}
             onChange={e => setValue(e.target.value)}
           />
 

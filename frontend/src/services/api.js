@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+// create instance axios
 const api = axios.create({
-  baseURL: 'https://3333-harlequin-viper-nl7y1t44.ws-us04.gitpod.io/',
+  baseURL: 'https://save-the-day-backend.herokuapp.com/',
   timeout: 15000,
   headers: {
       "Content-Type": "application/json"

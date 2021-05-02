@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../../../component/Navbar';
 import api from '../../../services/api';

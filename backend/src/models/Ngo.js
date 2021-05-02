@@ -1,5 +1,7 @@
 const mongoose = require('../database');
 
+// creating the ngo entity in mongodb
+// ngo = non-governmental organization
 const NgoSchema = new mongoose.Schema({
   name: {
     type: String,

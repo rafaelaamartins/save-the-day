@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory, useParams, useRouteMatch } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi'
 
 import api from '../../../services/api';
@@ -84,6 +84,8 @@ export default function EditIncident() {
             placeholder="Value"
             type="number"
             value={value}
+            min={0}
+            minLength={0}
             onChange={e => setValue(e.target.value)}
           />
 

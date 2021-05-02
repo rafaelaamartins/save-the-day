@@ -1,5 +1,6 @@
 const Ngo = require('../models/Ngo');
 
+// Function create ngo
 module.exports = {
   async create(request, response) {
     const { id } = request.body;

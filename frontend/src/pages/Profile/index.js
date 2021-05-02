@@ -11,7 +11,7 @@ import Logo from '../../component/Logo';
 export default function Profile() {
   const [incidents, setIncidents] = useState([]);
 
-  const history = useHistory();
+  const history = useHistory(); //used to navigate between routes
 
   const ngoId = localStorage.getItem('ngoId');
   const ngoName = localStorage.getItem('ngoName');
